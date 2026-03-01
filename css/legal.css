@@ -1,0 +1,181 @@
+/* ========================================
+   PinTech Legal Pages — Reading Styles
+   ======================================== */
+
+:root {
+  --primary: #16A34A;
+  --bg-white: #FFFFFF;
+  --text: #111827;
+  --text-muted: #6B7280;
+  --nav-height: 64px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg-white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Legal Navbar --- */
+.legal-nav {
+  position: sticky;
+  top: 0;
+  height: var(--nav-height);
+  background: var(--bg-white);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.legal-nav .nav-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legal-nav .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.legal-nav .nav-logo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.legal-nav .back-link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+/* --- Content --- */
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.legal-content h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.legal-content .meta {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+}
+
+.legal-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  padding-top: 24px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.legal-content h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.legal-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.legal-content p {
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.legal-content ul,
+.legal-content ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.legal-content li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.legal-content strong {
+  font-weight: 600;
+}
+
+/* --- Tables --- */
+.legal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+}
+
+.legal-content th,
+.legal-content td {
+  padding: 10px 16px;
+  text-align: left;
+  font-size: 0.9375rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.legal-content th {
+  font-weight: 600;
+  background: #F9FAFB;
+}
+
+/* --- Footer --- */
+.legal-footer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  border-top: 1px solid #E5E7EB;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .legal-content { padding: 32px 16px 64px; }
+  .legal-content h1 { font-size: 1.75rem; }
+  .legal-content h2 { font-size: 1.25rem; }
+}
