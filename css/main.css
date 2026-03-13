@@ -259,6 +259,13 @@ section {
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+a.store-badge:hover {
+  background: var(--green);
+  color: #fff;
 }
 
 /* --- Phone Showcase --- */
