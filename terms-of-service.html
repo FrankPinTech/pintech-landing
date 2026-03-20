@@ -22,7 +22,7 @@
 
   <main class="legal-content">
     <h1>Terms of Service</h1>
-    <p class="meta">Effective Date: March 1, 2026 &middot; Last Updated: March 8, 2026</p>
+    <p class="meta">Effective Date: March 1, 2026 &middot; Last Updated: March 20, 2026</p>
 
     <h2>1. Acceptance of Terms</h2>
     <p>By creating an account or using the PinTech mobile application (the "App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
@@ -49,20 +49,56 @@
       <li>Post comments containing hate speech, threats, or harassment directed at any individual or group</li>
       <li>Impersonate another person or entity</li>
       <li>Post spam, advertisements, or promotional content in comments</li>
-      <li>Attempt to manipulate the feed algorithm, XP system, or leaderboard through automated or deceptive means</li>
+      <li>Attempt to manipulate the feed algorithm, XP system, or leaderboard through automated, deceptive, or unauthorized means — including but not limited to exploiting APIs, database vulnerabilities, race conditions, or any other technical mechanism not intended for normal user interaction</li>
+      <li>Create multiple accounts, fake accounts, or bot accounts for any purpose, including but not limited to XP farming, referral abuse, or inflating engagement metrics</li>
+      <li>Use scripts, bots, browser extensions, API clients, or any automated tools to interact with PinTech's services, APIs, or databases in ways not explicitly provided through the App's user interface</li>
       <li>Use the App to collect information about other users without their consent</li>
-      <li>Reverse engineer, decompile, or disassemble any part of the App</li>
-      <li>Interfere with or disrupt the App's infrastructure or services</li>
+      <li>Reverse engineer, decompile, disassemble, or probe any part of the App, its APIs, its database, or its backend infrastructure</li>
+      <li>Interfere with or disrupt the App's infrastructure, services, or security mechanisms</li>
+      <li>Circumvent, bypass, or attempt to bypass any security measures, rate limits, access controls, or integrity checks implemented by PinTech</li>
       <li>Violate any applicable law or regulation while using the App</li>
     </ul>
-    <p>We reserve the right to remove content and suspend or terminate accounts that violate these rules.</p>
+    <p><strong>Any attempt to exploit a vulnerability — whether successful or not — constitutes a violation of these Terms.</strong> Discovering a vulnerability does not authorize you to exploit it. See Section 5 for our responsible disclosure policy.</p>
+    <p>We reserve the right to remove content, reset XP, and suspend or permanently terminate accounts that violate these rules, without prior notice in cases of severe or repeated violations.</p>
 
-    <h2>5. Content</h2>
+    <h2>5. Platform Integrity and Responsible Disclosure</h2>
 
-    <h3>5.1 News Content</h3>
+    <h3>5.1 Prohibited Exploitation</h3>
+    <p>PinTech maintains backend systems, APIs, databases, and security mechanisms to ensure fair and honest use of the platform. <strong>You are strictly prohibited from:</strong></p>
+    <ul>
+      <li>Directly or indirectly modifying, inflating, or tampering with your XP balance, leaderboard position, referral count, or any other platform metric through any means other than normal, intended use of the App</li>
+      <li>Sending crafted, unauthorized, or manipulated requests to PinTech's APIs or database endpoints — including but not limited to Supabase REST API, Edge Functions, or any backend service</li>
+      <li>Exploiting triggers, stored procedures, row-level security policies, or any database mechanism to gain unauthorized benefits</li>
+      <li>Repeatedly exploiting the same or similar vulnerability after being warned or having your account corrected</li>
+    </ul>
+
+    <h3>5.2 Three-Strike Policy</h3>
+    <p>PinTech enforces a strict three-strike policy for platform integrity violations:</p>
+    <ul>
+      <li><strong>Strike 1:</strong> Your account metrics (XP, referrals, etc.) will be reset to their legitimate values. You will receive a written warning via email.</li>
+      <li><strong>Strike 2:</strong> Your account metrics will be reset. You will receive a final warning. PinTech reserves the right to temporarily suspend your account for up to 30 days.</li>
+      <li><strong>Strike 3:</strong> Your account will be <strong>permanently banned</strong> without further notice. All associated data will be deleted. You will be prohibited from creating a new account.</li>
+    </ul>
+    <p>PinTech reserves the right to skip directly to a permanent ban in cases of egregious, large-scale, or malicious exploitation.</p>
+
+    <h3>5.3 Responsible Disclosure</h3>
+    <p>If you discover a security vulnerability, bug, or exploit in PinTech's systems, we ask that you:</p>
+    <ol>
+      <li><strong>Do not exploit it</strong> — not even to test or demonstrate the issue</li>
+      <li><strong>Report it immediately</strong> to <a href="mailto:frank.pintech@proton.me">frank.pintech@proton.me</a> with a description of the vulnerability</li>
+      <li><strong>Do not disclose it publicly</strong> until we have confirmed and resolved the issue</li>
+    </ol>
+    <p>We take vulnerability reports seriously and will acknowledge your contribution. Responsible disclosure will never result in account action against you.</p>
+
+    <h3>5.4 Monitoring and Enforcement</h3>
+    <p>PinTech actively monitors platform activity, API usage, and database operations for anomalies. We maintain detailed logs of all account activity. Evidence of exploitation may be preserved and used to enforce these Terms, and where applicable, may be referred to law enforcement under the Computer Fraud and Abuse Act (18 U.S.C. &sect; 1030), the Texas Penal Code Chapter 33 (Computer Crimes), or equivalent laws in your jurisdiction.</p>
+
+    <h2>6. Content</h2>
+
+    <h3>6.1 News Content</h3>
     <p>News content displayed in the App is sourced from publicly available RSS feeds and summarized using artificial intelligence. PinTech does not create original news content. News summaries are AI-generated and may not capture every nuance of the original article. A link to the original source is provided with each post.</p>
 
-    <h3>5.2 User-Generated Content</h3>
+    <h3>6.2 User-Generated Content</h3>
     <p>By posting comments on the App, you:</p>
     <ul>
       <li>Retain ownership of your comment content</li>
@@ -72,18 +108,18 @@
       <li>Acknowledge that you can delete your own comments at any time</li>
     </ul>
 
-    <h3>5.3 Reactions</h3>
+    <h3>6.3 Reactions</h3>
     <p>Reactions (Agree, Disagree, Shocked, Sad, Angry, Happy) are a form of expression within the App. Reaction data is used to personalize your feed and, in anonymized aggregate form, to generate B2B insights as described in our Privacy Policy.</p>
 
-    <h2>6. Intellectual Property</h2>
+    <h2>7. Intellectual Property</h2>
 
-    <h3>6.1 PinTech's Property</h3>
+    <h3>7.1 PinTech's Property</h3>
     <p>The App, including its design, feed algorithm, XP system, branding, and all associated technology, is the property of PinTech News, LLC. You may not copy, modify, or distribute any part of the App without our written permission.</p>
 
-    <h3>6.2 Third-Party Content</h3>
+    <h3>7.2 Third-Party Content</h3>
     <p>News articles linked from the App are the property of their respective publishers. PinTech provides AI-generated summaries for informational purposes and links to original sources for full articles.</p>
 
-    <h2>7. Data and Privacy</h2>
+    <h2>8. Data and Privacy</h2>
     <p>Your use of the App is also governed by our <a href="privacy-policy.html">Privacy Policy</a>, which describes:</p>
     <ul>
       <li>What data we collect and why</li>
@@ -93,52 +129,65 @@
     </ul>
     <p>By using the App, you acknowledge that you have read and understood our Privacy Policy. During registration, you provide explicit consent for data collection through the consent checkbox, which you may withdraw at any time through Privacy Controls.</p>
 
-    <h2>8. XP System, Leaderboard, and Referrals</h2>
+    <h2>9. XP System, Leaderboard, and Referrals</h2>
 
-    <h3>8.1 XP and Leaderboard</h3>
+    <h3>9.1 Experience Points (XP)</h3>
     <ul>
-      <li>Experience Points (XP) are earned when other users react to your comments</li>
+      <li>Experience Points (XP) are earned through legitimate in-app activity: posting comments (first comment per post only), reacting to news posts, receiving reactions on your comments, and successful referrals</li>
       <li>You do not earn XP for reacting to your own comments</li>
       <li>XP determines your position on the global and per-country leaderboards</li>
-      <li>XP has no monetary value and cannot be exchanged, transferred, or redeemed</li>
-      <li>PinTech reserves the right to adjust, reset, or modify the XP system at any time</li>
+      <li>XP has no monetary value and cannot be exchanged, transferred, or redeemed for cash, prizes, or any other consideration — except where PinTech explicitly offers rewards (such as contests) at its sole discretion</li>
+      <li><strong>XP may only be earned through the App's intended user interface.</strong> Any attempt to earn, inflate, or modify XP through direct API calls, database manipulation, automated scripts, exploit of triggers, or any other unauthorized means is a violation of these Terms and will be handled under Section 5 (Platform Integrity)</li>
+      <li>PinTech reserves the right to audit, adjust, reset, or recalculate any user's XP at any time, without prior notice, to maintain platform integrity</li>
     </ul>
 
-    <h3>8.2 Referral Program</h3>
+    <h3>9.2 Referral Program</h3>
     <ul>
       <li>Each user receives a unique 6-character referral code upon account creation</li>
       <li>You may share your referral code with others to invite them to PinTech</li>
-      <li>When a new user signs up using your referral code, you earn 25 XP and the new user earns 10 XP</li>
+      <li>When a new user signs up using your referral code, you earn 100 XP and the new user earns 10 XP</li>
       <li>Each new user may only apply one referral code, and only during onboarding</li>
       <li>You may not refer yourself or create multiple accounts to exploit the referral system</li>
-      <li>PinTech reserves the right to revoke referral XP and suspend accounts in cases of abuse or fraud</li>
+      <li>Referral XP is only awarded for genuine new users — accounts created solely to generate referral XP will be treated as fraudulent</li>
+      <li>PinTech reserves the right to revoke referral XP, reverse referral records, and suspend accounts in cases of abuse or fraud</li>
       <li>The referral program may be modified or discontinued at any time</li>
     </ul>
 
-    <h2>9. Account Termination</h2>
+    <h3>9.3 Contests and Promotions</h3>
+    <ul>
+      <li>PinTech may from time to time offer contests, challenges, or promotions with prizes</li>
+      <li>Eligibility, rules, and prize details will be communicated through the App or official PinTech channels</li>
+      <li>Any attempt to manipulate contest outcomes through XP exploitation, fake accounts, or any other fraudulent means will result in immediate disqualification and account action under Section 5</li>
+      <li>PinTech reserves the right to cancel, modify, or suspend any contest at any time</li>
+    </ul>
 
-    <h3>9.1 By You</h3>
+    <h2>10. Account Termination</h2>
+
+    <h3>10.1 By You</h3>
     <p>You may delete your account at any time through <strong>Settings &gt; Delete Account</strong>. Account deletion is permanent and results in the removal of all your personal data, including your profile, comments, reactions, interests, notifications, and consent records.</p>
 
-    <h3>9.2 By PinTech</h3>
+    <h3>10.2 By PinTech</h3>
     <p>We may suspend or terminate your account if you:</p>
     <ul>
-      <li>Violate these Terms or our User Conduct rules</li>
+      <li>Violate these Terms, including Section 4 (User Conduct) or Section 5 (Platform Integrity)</li>
       <li>Provide false information during registration</li>
       <li>Engage in activity that harms other users or the integrity of the App</li>
+      <li>Exploit or attempt to exploit any vulnerability in PinTech's systems</li>
+      <li>Create fake or duplicate accounts</li>
       <li>Are under 18 years of age</li>
     </ul>
-    <p>We will make reasonable efforts to notify you before termination, except in cases of severe or repeated violations.</p>
+    <p>For platform integrity violations, enforcement follows the three-strike policy in Section 5.2. <strong>PinTech reserves the right to permanently ban accounts without prior notice in cases of egregious or malicious exploitation.</strong></p>
+    <p>Terminated users are prohibited from creating new accounts. Circumventing a ban constitutes an additional violation of these Terms.</p>
 
-    <h2>10. Disclaimers</h2>
+    <h2>11. Disclaimers</h2>
 
-    <h3>10.1 News Content</h3>
+    <h3>11.1 News Content</h3>
     <p>News summaries displayed in the App are generated by artificial intelligence and are provided for informational purposes only. They are <strong>not</strong> professional advice (legal, financial, medical, or otherwise). PinTech does not guarantee the accuracy, completeness, or timeliness of any news summary. Always consult the original source for full reporting.</p>
 
-    <h3>10.2 Service Availability</h3>
+    <h3>11.2 Service Availability</h3>
     <p>The App is provided on an "as is" and "as available" basis. We do not guarantee uninterrupted or error-free operation. We may modify, suspend, or discontinue features at any time without prior notice.</p>
 
-    <h2>11. Limitation of Liability</h2>
+    <h2>12. Limitation of Liability</h2>
     <p>To the maximum extent permitted by applicable law:</p>
     <ul>
       <li>PinTech shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the App</li>
@@ -147,13 +196,13 @@
     </ul>
     <p>These limitations apply regardless of the legal theory on which the claim is based.</p>
 
-    <h2>12. Indemnification</h2>
+    <h2>13. Indemnification</h2>
     <p>You agree to indemnify and hold PinTech News, LLC, its officers, and agents harmless from any claims, losses, or damages (including legal fees) arising from your violation of these Terms, your use of the App, or your comments.</p>
 
-    <h2>13. Governing Law</h2>
+    <h2>14. Governing Law</h2>
     <p>These Terms are governed by and construed in accordance with the laws of the <strong>State of Texas</strong>, without regard to conflict of law principles. Any disputes arising from these Terms or your use of the App shall be resolved in the courts located in the State of Texas.</p>
 
-    <h2>14. Changes to These Terms</h2>
+    <h2>15. Changes to These Terms</h2>
     <p>We may update these Terms from time to time. When we make material changes:</p>
     <ul>
       <li>We will update the "Last Updated" date at the top of this document</li>
@@ -162,13 +211,13 @@
     </ul>
     <p>If you do not agree with the updated Terms, you must stop using the App and delete your account.</p>
 
-    <h2>15. Severability</h2>
+    <h2>16. Severability</h2>
     <p>If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in full effect.</p>
 
-    <h2>16. Entire Agreement</h2>
+    <h2>17. Entire Agreement</h2>
     <p>These Terms, together with our <a href="privacy-policy.html">Privacy Policy</a>, constitute the entire agreement between you and PinTech regarding your use of the App, superseding any prior agreements.</p>
 
-    <h2>17. Contact Us</h2>
+    <h2>18. Contact Us</h2>
     <p>For questions about these Terms:</p>
     <ul>
       <li><strong>Email:</strong> <a href="mailto:frank.pintech@proton.me">frank.pintech@proton.me</a></li>
