@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verified — PinTech</title>
+  <meta name="description" content="Your PinTech email has been verified.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/legal.css">
+  <style>
+    .msg { margin-top: 24px; padding: 16px 20px; border-radius: 8px; font-size: 1rem; line-height: 1.6; }
+    .msg-success { background: #F0FDF4; color: #16A34A; border: 1px solid #BBF7D0; }
+    .msg-error { background: #FEF2F2; color: #DC2626; border: 1px solid #FECACA; }
+    .msg-loading { background: #EFF6FF; color: #2563EB; border: 1px solid #BFDBFE; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <nav class="legal-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/icon.png" alt="PinTech logo" width="32" height="32">
+        PinTech
+      </a>
+      <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </div>
+  </nav>
+
+  <main class="legal-content">
+    <h1>Email Verification</h1>
+
+    <div id="state-loading">
+      <div class="msg msg-loading">Verifying your email...</div>
+    </div>
+
+    <div id="state-success" class="hidden">
+      <div class="msg msg-success">
+        <strong>Your email has been verified!</strong><br>
+        You can now open the PinTech app and log in with your account.
+      </div>
+    </div>
+
+    <div id="state-error" class="hidden">
+      <div class="msg msg-error" id="error-msg">
+        This verification link is invalid or has expired. Please open the app and request a new verification email.
+      </div>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    &copy; 2026 PinTech. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script>
+    const SUPABASE_URL = 'https://gleiwdqnpsiaazawudqn.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsZWl3ZHFucHNpYWF6YXd1ZHFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyODIxNDMsImV4cCI6MjA4Nzg1ODE0M30.ta1wLASZmzuJtQhcww0_ukAWyBt6zxxvXs2PxhLdbnY';
+
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    function show(id) {
+      document.querySelectorAll('[id^="state-"]').forEach(el => el.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    async function init() {
+      const hash = window.location.hash;
+
+      // Supabase puts the token in the URL hash after email confirmation redirect
+      if (!hash || !hash.includes('access_token')) {
+        show('state-error');
+        return;
+      }
+
+      // Let Supabase client extract and verify the session
+      const { data, error } = await supabase.auth.getSession();
+
+      if (error || !data.session) {
+        show('state-error');
+        return;
+      }
+
+      show('state-success');
+    }
+
+    init();
+  </script>
+
+</body>
+</html>
