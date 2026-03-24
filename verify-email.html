@@ -66,22 +66,42 @@
 
     async function init() {
       const hash = window.location.hash;
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get('code');
 
-      // Supabase puts the token in the URL hash after email confirmation redirect
-      if (!hash || !hash.includes('access_token')) {
+      // PKCE flow: Supabase sends a ?code= query param
+      if (code) {
+        const { data, error } = await supabase.auth.exchangeCodeForSession(code);
+        if (error || !data.session) {
+          document.getElementById('error-msg').textContent = error?.message || 'This verification link is invalid or has expired.';
+          show('state-error');
+          return;
+        }
+        show('state-success');
+        return;
+      }
+
+      // Implicit flow fallback: access_token in URL hash
+      if (hash && hash.includes('access_token')) {
+        const { data, error } = await supabase.auth.getSession();
+        if (error || !data.session) {
+          show('state-error');
+          return;
+        }
+        show('state-success');
+        return;
+      }
+
+      // Check for error in hash
+      if (hash && hash.includes('error')) {
+        const hashParams = new URLSearchParams(hash.substring(1));
+        const desc = hashParams.get('error_description');
+        document.getElementById('error-msg').textContent = desc ? decodeURIComponent(desc.replace(/\+/g, ' ')) : 'This verification link is invalid or has expired.';
         show('state-error');
         return;
       }
 
-      // Let Supabase client extract and verify the session
-      const { data, error } = await supabase.auth.getSession();
-
-      if (error || !data.session) {
-        show('state-error');
-        return;
-      }
-
-      show('state-success');
+      show('state-error');
     }
 
     init();
